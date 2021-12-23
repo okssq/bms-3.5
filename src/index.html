@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>        
+        <meta charset="UTF-8" />
+        <title>主动安全平台</title>
+    </head>
+    <body>
+        <div id="app"></div>
+        <script>
+            let host = window.location.host;
+            if(host.indexOf("zlzk")>-1){
+                document.title = '湖南省消防指挥平台'
+            }
+            var hhh_host = window.location.protocol+"//"+window.location.host+"/cdn";
+            if(host.indexOf("localhost") > -1 || host.indexOf("192.168") > -1){
+                hhh_host = "/src/assets";
+            }
+            // console.log('host',host)
+            var script0 = document.createElement("script");
+                script0.src = hhh_host+"/js/jquery2.2.4.js";
+
+            var s0 = document.getElementsByTagName("script")[0];
+            s0.parentNode.insertBefore(script0, s0);
+
+        </script>
+        <script src="https://cdn.bootcss.com/echarts/4.2.1-rc1/echarts.js"></script>
+        <script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.14&key=7543854981512b4c983ddc0f1287dc49&plugin=AMap.Autocomplete,AMap.PlaceSearch,AMap.PolyEditor,AMap.CircleEdito,AMap.Driving,AMap.ControlBar,AMap.Geocoder,AMap.GraspRoad,AMap.StyleObject,AMap.MassMarks"></script>
+        <script src="//webapi.amap.com/ui/1.0/main.js"></script>
+    </body>
+</html>

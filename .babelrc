@@ -1,0 +1,21 @@
+{
+	"presets": [
+		"@vue/babel-preset-jsx", //支持vue 使用jsx语法
+		[
+			"@babel/preset-env",
+			{
+				"targets": {
+					"browsers": [
+						"> 1%",
+						"last 2 versions",
+						"not ie <= 8"
+					]
+				}
+			}
+		]
+	],
+	"plugins": [
+		"@babel/plugin-transform-runtime",
+		"@babel/plugin-syntax-dynamic-import", //确保路由按需加载
+	],
+}
